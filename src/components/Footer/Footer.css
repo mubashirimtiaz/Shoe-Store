@@ -1,0 +1,10 @@
+footer {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 5px #aaaaaa;
+  /* position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+}

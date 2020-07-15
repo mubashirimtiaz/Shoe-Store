@@ -1,0 +1,10 @@
+.category-img {
+  filter: grayscale(100);
+  transition: all 0.2s ease;
+}
+.category-img:hover {
+  filter: grayscale(0);
+}
+.category-img:hover .category-img ~ h3 {
+  color: crimson;
+}
