@@ -38,20 +38,20 @@ const Cart = () => {
                 onClick={() => addQuantity(prod.productID)}
               >
                 Add
-              </button>{" "}
+              </button>
               {" | "}
               <button
                 className="btn btn-light border border-dark px-3"
                 onClick={() => SubsQuantity(prod.productID)}
               >
                 Minus
-              </button>{" "}
+              </button>
               {" | "}
               <button
                 className="btn btn-light border border-dark px-3"
                 onClick={() => removeItem(prod.productID)}
               >
-                Remove Product
+                Remove
               </button>
             </div>
           </div>
