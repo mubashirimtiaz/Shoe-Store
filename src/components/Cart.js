@@ -15,7 +15,10 @@ const Cart = () => {
   };
   return products.length ? (
     <div>
-      <button className="my-3" onClick={() => dispatch({ type: "CLEAR_CART" })}>
+      <button
+        className="my-3 btn btn-light border border-dark px-3 btn-lg"
+        onClick={() => dispatch({ type: "CLEAR_CART" })}
+      >
         Clear Cart
       </button>
       {products.map((prod) => {
@@ -26,17 +29,28 @@ const Cart = () => {
               alt={prod.productName}
               className="shadow-sm"
             />
-            <h5>{prod.productName}</h5>
+            <h5 className="mt-2">{prod.productName}</h5>
             <h5>Quantity: {prod.qty}</h5>
             <p>Price: ${prod.price * prod.qty}</p>
             <div className="my-3">
-              <button onClick={() => addQuantity(prod.productID)}>Add</button>{" "}
+              <button
+                className="btn btn-light border border-dark px-3"
+                onClick={() => addQuantity(prod.productID)}
+              >
+                Add
+              </button>{" "}
               {" | "}
-              <button onClick={() => SubsQuantity(prod.productID)}>
+              <button
+                className="btn btn-light border border-dark px-3"
+                onClick={() => SubsQuantity(prod.productID)}
+              >
                 Minus
               </button>{" "}
               {" | "}
-              <button onClick={() => removeItem(prod.productID)}>
+              <button
+                className="btn btn-light border border-dark px-3"
+                onClick={() => removeItem(prod.productID)}
+              >
                 Remove Product
               </button>
             </div>
