@@ -5,6 +5,8 @@ const Cart = () => {
   const [checkout, setCheckout] = useState(false);
   const { products, dispatch } = useContext(CartContext);
   console.log(products);
+  const totalAmount = products.reduce((acc, curr) => (acc += curr.price), 0);
+  const totalItem = products.reduce((acc, curr) => (acc += curr.qty), 0);
   const addQuantity = (id) => {
     dispatch({ type: "Add_QUANTITY", id: id });
   };
@@ -36,7 +38,7 @@ const Cart = () => {
                 alt={prod.productName}
                 className="shadow-sm"
               />
-              <h5 className="mt-2">{prod.productName}</h5>
+              <h4 className="mt-2">{prod.productName}</h4>
               <h5>Quantity: {prod.qty}</h5>
               <p>Price: ${prod.price * prod.qty}</p>
               <div className="my-3">
@@ -65,12 +67,23 @@ const Cart = () => {
           );
         })}
         <hr />
+        <h5>
+          Total Items = <span>{totalItem}</span>
+        </h5>
+        <h5>
+          Total Amount = <span>${totalAmount * totalItem}</span>
+        </h5>
         <button
           className=" mt-3 btn btn-light border border-dark px-3 btn-lg"
           onClick={handleCartCheckout}
         >
           Checkout
-        </button>
+        </button>{" "}
+        <Link to="/">
+          <button className=" mt-3 btn btn-light border border-dark px-3 btn-lg">
+            Go to Home
+          </button>
+        </Link>
       </div>
     );
   } else if (checkout) {
@@ -79,7 +92,6 @@ const Cart = () => {
         className=" my-5 m-auto d-flex justify-content-center align-items-center"
         style={{ minHeight: "80vh", flexDirection: "column" }}
       >
-        {" "}
         <h1 className=" text-success">Successfully Checkout</h1>
         {/* <p>You have not added anything yet</p> */}
         <Link to="/">

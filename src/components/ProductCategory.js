@@ -14,7 +14,6 @@ const ProductCategory = () => {
   );
 
   const categoryProduct = productCategory.map((pro) => pro.products);
-  console.log(categoryProduct);
 
   const addToCart = (prod) => {
     setCheck(true);

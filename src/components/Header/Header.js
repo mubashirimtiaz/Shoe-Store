@@ -8,8 +8,6 @@ const Header = () => {
   const { products } = useContext(CartContext);
 
   const totalProducts = products.reduce((acc, curr) => (acc += curr.qty), 0);
-  console.log(products);
-  console.log("totalProducts", totalProducts);
   return (
     <ul className="nav bg-white shadow-sm  ">
       <li className="nav-item">
