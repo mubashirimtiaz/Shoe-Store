@@ -51,7 +51,7 @@ const ProductCategory = () => {
                       View Details
                     </button>
                   </Link>
-                  {" | "}
+                  {"|"}
                   {check ? (
                     <button
                       className="btn btn-light border border-dark"
