@@ -27,7 +27,7 @@ const Home = () => {
       <div className="d-flex">
         {categories.map((category) => {
           return (
-            <div key={category.id} className="row">
+            <div key={category.id} className="row ">
               <Link
                 to={`/products/${category.category}`}
                 style={{ textDecoration: "none" }}
@@ -35,7 +35,7 @@ const Home = () => {
                 <img
                   src={category.imgSrc}
                   alt={category.category}
-                  className="img-fluid category-img"
+                  className="img-fluid category-img shadow-sm"
                 />
                 <h3 className="text-dark category">
                   {category.category.toUpperCase()}

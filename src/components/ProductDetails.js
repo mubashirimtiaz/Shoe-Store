@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router";
 import { GlobalContext } from "../contexts/GlobalContext";
+import { CartContext } from "../contexts/CartContext";
 
 const ProductDetails = () => {
-  // const { kidProducts } = useContext(KidsProductsContext);
+  const [check, setCheck] = useState(false);
   const { prodID } = useParams();
+  const { dispatch } = useContext(CartContext);
+
   const { products } = useContext(GlobalContext);
 
   let product = products.map((prod) => prod.products);
@@ -12,6 +15,23 @@ const ProductDetails = () => {
   let allProduct = [].concat(...product);
   // console.log(product[0].concat(product[1].concat(product[2])));
   const filteredProd = allProduct.find((pro) => pro.productID === prodID);
+
+  const addToCart = (prod) => {
+    setCheck(true);
+    dispatch({
+      type: "ADD_PRODUCT",
+      product: {
+        id: prod.productID,
+        name: prod.productName,
+        imgSrc: prod.imgSrc,
+        price: prod.price,
+      },
+    });
+  };
+  const addQuantity = (id) => {
+    dispatch({ type: "Add_QUANTITY", id: id });
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -36,6 +56,23 @@ const ProductDetails = () => {
             <u>Details</u>
           </h3>
           <p className="text-justify">{filteredProd.details}</p>
+          <div>
+            {check ? (
+              <button
+                className="btn btn-light border border-dark"
+                onClick={() => addQuantity(filteredProd.productID)}
+              >
+                Add to Cart
+              </button>
+            ) : (
+              <button
+                className="btn btn-light border border-dark"
+                onClick={() => addToCart(filteredProd)}
+              >
+                Add to Cart
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
