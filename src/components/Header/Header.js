@@ -11,7 +11,7 @@ const Header = () => {
   console.log(products);
   console.log("totalProducts", totalProducts);
   return (
-    <ul className="nav bg-white shadow-sm">
+    <ul className="nav bg-white shadow-sm  ">
       <li className="nav-item">
         <NavLink
           activeClassName="active-nav-link"

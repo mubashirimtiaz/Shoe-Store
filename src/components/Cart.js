@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const { products, dispatch } = useContext(CartContext);
   console.log(products);
@@ -20,7 +21,11 @@ const Cart = () => {
       {products.map((prod) => {
         return (
           <div key={prod.productID}>
-            <img src={prod.imgSrc} alt={prod.productName} />
+            <img
+              src={prod.imgSrc}
+              alt={prod.productName}
+              className="shadow-sm"
+            />
             <h5>{prod.productName}</h5>
             <h5>Quantity: {prod.qty}</h5>
             <p>Price: ${prod.price * prod.qty}</p>
@@ -40,7 +45,19 @@ const Cart = () => {
       })}
     </div>
   ) : (
-    <div className="display-3 my-5 m-auto"> Cart is Empty</div>
+    <div
+      className=" my-5 m-auto d-flex justify-content-center align-items-center"
+      style={{ minHeight: "80vh", flexDirection: "column" }}
+    >
+      {" "}
+      <p className="display-4">Cart is Empty</p>
+      <p>You have not added anything yet</p>
+      <Link to="/">
+        <button className="btn btn-light border border-dark px-5">
+          Go to Home
+        </button>
+      </Link>
+    </div>
   );
 };
 

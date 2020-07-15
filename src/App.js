@@ -24,8 +24,6 @@ function App() {
       <GlobalContextProvider>
         <CartContextProvider>
           <Header />
-          <br />
-          <br />
 
           <Routes>
             <Route path="/" element={<Home />}></Route>

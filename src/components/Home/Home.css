@@ -5,6 +5,29 @@
 .category-img:hover {
   filter: grayscale(0);
 }
-.category-img:hover .category-img ~ h3 {
+/* .category-img:hover .category-img ~ h3 {
   color: crimson;
+} */
+.banner {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    #000428,
+    #004e92
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner p {
+  text-shadow: 1px 1px 2px black;
+}
+.banner .left,
+.right {
+  background: linear-gradient(
+    to right,
+    #00d2ff,
+    #928dab
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
