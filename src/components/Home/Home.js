@@ -1,24 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import kids from "../../images/kids-banner.jpg";
+import men from "../../images/men-banner.jpg";
+import women from "../../images/women-banner.jpg";
 const Home = () => {
   const categories = [
     {
       category: "kids",
-      imgSrc:
-        "http://www.servis.com/wp-content/uploads/2017/09/servis-shoes-kids-shoes-banner-back.jpg",
+      imgSrc: { kids },
       id: 1,
     },
     {
       category: "men",
-      imgSrc:
-        "http://www.servis.com/wp-content/uploads/2017/09/servis-shoes-men-shoes-banner-back.jpg",
+      imgSrc: { men },
       id: 2,
     },
     {
       category: "women",
-      imgSrc:
-        "http://www.servis.com/wp-content/uploads/2017/09/servis-shoes-women-shoes-banner-back.jpg",
+      imgSrc: { women },
       id: 3,
     },
   ];
@@ -32,7 +32,7 @@ const Home = () => {
         <div className="right p-4 w-25"></div>
       </div>
       <div className="container">
-        <div className="d-flex">
+        <div className="d-flex justify-content-between align-items-center">
           {categories.map((category) => {
             return (
               <div key={category.id} className="row ">
@@ -41,7 +41,7 @@ const Home = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <img
-                    src={category.imgSrc}
+                    src={women}
                     alt={category.category}
                     className="img-fluid category-img shadow-sm"
                   />
