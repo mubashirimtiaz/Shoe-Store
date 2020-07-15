@@ -16,11 +16,12 @@ const Cart = () => {
   return products.length ? (
     <div>
       <button
-        className="my-3 btn btn-light border border-dark px-3 btn-lg"
+        className=" mt-3 btn btn-light border border-dark px-3 btn-lg"
         onClick={() => dispatch({ type: "CLEAR_CART" })}
       >
         Clear Cart
       </button>
+      <hr />
       {products.map((prod) => {
         return (
           <div key={prod.productID}>
