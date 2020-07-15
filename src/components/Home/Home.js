@@ -8,17 +8,17 @@ const Home = () => {
   const categories = [
     {
       category: "kids",
-      imgSrc: { kids },
+      imgSrc: `${kids}`,
       id: 1,
     },
     {
       category: "men",
-      imgSrc: { men },
+      imgSrc: `${men}`,
       id: 2,
     },
     {
       category: "women",
-      imgSrc: { women },
+      imgSrc: `${women}`,
       id: 3,
     },
   ];
@@ -41,7 +41,7 @@ const Home = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <img
-                    src={women}
+                    src={category.imgSrc}
                     alt={category.category}
                     className="img-fluid category-img shadow-sm"
                   />
