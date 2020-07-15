@@ -14,9 +14,6 @@ import {
 } from "./components";
 import CartContextProvider from "./contexts/CartContext";
 import GlobalContextProvider from "./contexts/GlobalContext";
-const Test = () => {
-  return <h1>Hello</h1>;
-};
 
 function App() {
   return (

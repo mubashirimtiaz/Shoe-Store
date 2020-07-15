@@ -33,7 +33,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row">
         <div className="col-md-5 m-auto">
           <div className="card shadow-sm">

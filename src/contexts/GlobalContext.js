@@ -78,7 +78,7 @@ const allProducts = [
 ];
 export const GlobalContext = createContext();
 const GlobalContextProvider = ({ children }) => {
-  const [products, setProducts] = useState(allProducts);
+  const [products] = useState(allProducts);
   return (
     <GlobalContext.Provider value={{ products }}>
       {children}
