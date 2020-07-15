@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-white mt-5">
+    <footer className="bg-white mt-5 container-fluid">
       <div>
         <span>
           {" "}
