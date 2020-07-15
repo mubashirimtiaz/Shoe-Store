@@ -33,8 +33,8 @@ const ProductCategory = () => {
   };
 
   return (
-    <div>
-      <h1>{prodCategory} Items</h1>
+    <div className="my-3">
+      <h1>{prodCategory.toUpperCase()} Items</h1>
       <h1>
         {categoryProduct[0].map((prod) => (
           <div key={prod.productID} className="container">
