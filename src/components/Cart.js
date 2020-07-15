@@ -80,7 +80,7 @@ const Cart = () => {
         style={{ minHeight: "80vh", flexDirection: "column" }}
       >
         {" "}
-        <p className="display-4 text-success">Successfully Checkout</p>
+        <h1 className=" text-success">Successfully Checkout</h1>
         {/* <p>You have not added anything yet</p> */}
         <Link to="/">
           <button className="btn btn-light border border-dark px-5">

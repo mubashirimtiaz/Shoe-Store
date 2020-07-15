@@ -9,7 +9,7 @@ const allProducts = [
         imgSrc:
           "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/461-6022-b_360x.jpg?v=1588929868",
         stock: 5,
-        price: 30,
+        price: 25,
         details:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi provident adipisci architecto commodi? Nihil placeat architecto tempora dolore, totam a eligendi hic quasi nemo ex? Fugiat repellat deserunt tempore.",
       },
@@ -19,7 +19,7 @@ const allProducts = [
         imgSrc:
           "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/361-9014-b_360x.jpg?v=1588677273",
         stock: 8,
-        price: 30,
+        price: 22,
         details:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi provident adipisci architecto commodi? Nihil placeat architecto tempora dolore, totam a eligendi hic quasi nemo ex? Fugiat repellat deserunt tempore.",
       },
@@ -44,7 +44,7 @@ const allProducts = [
         imgSrc:
           "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/861-4558-b_360x.jpg?v=1586554499",
         stock: 7,
-        price: 30,
+        price: 35,
         details:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi provident adipisci architecto commodi? Nihil placeat architecto tempora dolore, totam a eligendi hic quasi nemo ex? Fugiat repellat deserunt tempore.",
       },
@@ -59,7 +59,7 @@ const allProducts = [
         imgSrc:
           "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/541-5009-b_360x.jpg?v=1588671704",
         stock: 9,
-        price: 30,
+        price: 20,
         details:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi provident adipisci architecto commodi? Nihil placeat architecto tempora dolore, totam a eligendi hic quasi nemo ex? Fugiat repellat deserunt tempore.",
       },
@@ -69,7 +69,7 @@ const allProducts = [
         imgSrc:
           "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/504-2009-b_360x.jpg?v=1587903246",
         stock: 6,
-        price: 30,
+        price: 45,
         details:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi provident adipisci architecto commodi? Nihil placeat architecto tempora dolore, totam a eligendi hic quasi nemo ex? Fugiat repellat deserunt tempore.",
       },
