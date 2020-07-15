@@ -27,7 +27,7 @@ const Home = () => {
       <div className="container-fluid banner mb-5 mt-0 p-0">
         <div className="left p-4 w-25 "></div>
         <div className="center w-50">
-          <p className="display-3 text-light">SHOES FOR EVERYONE</p>
+          <p className="display-4 text-light">SHOES FOR EVERYONE</p>
         </div>
         <div className="right p-4 w-25"></div>
       </div>
