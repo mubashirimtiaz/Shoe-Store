@@ -16,7 +16,7 @@ const ProductCategory = () => {
   const categoryProduct = productCategory.map((pro) => pro.products);
 
   const addToCart = (prod) => {
-    setCheck(true);
+    setCheck(!check);
     dispatch({
       type: "ADD_PRODUCT",
       product: {

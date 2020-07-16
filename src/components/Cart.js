@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const [checkout, setCheckout] = useState(false);
   const { products, dispatch } = useContext(CartContext);
-  console.log(products);
   const totalAmount = products.reduce((acc, curr) => (acc += curr.price), 0);
   const totalItem = products.reduce((acc, curr) => (acc += curr.qty), 0);
   const addQuantity = (id) => {
@@ -49,12 +48,21 @@ const Cart = () => {
                   Add
                 </button>
                 {" | "}
-                <button
-                  className="btn btn-light border border-dark px-3"
-                  onClick={() => SubsQuantity(prod.productID)}
-                >
-                  Minus
-                </button>
+                {prod.qty > 1 ? (
+                  <button
+                    className="btn btn-light border border-dark px-3"
+                    onClick={() => SubsQuantity(prod.productID)}
+                  >
+                    Minus
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-light border border-dark px-3"
+                    onClick={() => removeItem(prod.productID)}
+                  >
+                    Minus
+                  </button>
+                )}
                 {" | "}
                 <button
                   className="btn btn-light border border-dark px-3"
