@@ -32,7 +32,7 @@ const Home = () => {
         <div className="right p-4 w-25"></div>
       </div>
       <div className="container">
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-md-flex d-block justify-content-between align-items-center">
           {categories.map((category) => {
             return (
               <div key={category.id} className="row ">
