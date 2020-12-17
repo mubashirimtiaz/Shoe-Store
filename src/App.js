@@ -15,7 +15,7 @@ import {
 import CartContextProvider from "./contexts/CartContext";
 import GlobalContextProvider from "./contexts/GlobalContext";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <GlobalContextProvider>
@@ -43,6 +43,6 @@ function App() {
       </GlobalContextProvider>
     </div>
   );
-}
+};
 
 export default App;
